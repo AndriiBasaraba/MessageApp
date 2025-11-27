@@ -49,6 +49,7 @@ kotlin {
 
 dependencies {
     implementation(project(":database:impl"))
+    implementation(project(":data:impl"))
 
 
 

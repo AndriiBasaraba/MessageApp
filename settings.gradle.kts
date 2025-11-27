@@ -29,6 +29,7 @@ include(":database:impl")
 
 //data region
 include(":data:contract")
+include(":data:impl")
 //region end
 
 //domain region

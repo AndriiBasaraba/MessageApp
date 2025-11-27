@@ -1,6 +1,7 @@
 package basaraba.andrii.messageapp
 
 import android.app.Application
+import basaraba.andrii.messageapp.data.impl.di.messageDataModule
 import basaraba.andrii.messageapp.database.impl.di.databaseModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -18,7 +19,8 @@ internal class MessagesApplication : Application() {
 
             modules(
                 arrayListOf(
-                    databaseModule
+                    databaseModule,
+                    messageDataModule
                 )
             )
         }
