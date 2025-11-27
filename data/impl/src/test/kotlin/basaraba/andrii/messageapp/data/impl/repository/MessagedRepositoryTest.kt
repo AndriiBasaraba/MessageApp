@@ -4,6 +4,7 @@ import basaraba.andrii.domain.model.MessageDomain
 import basaraba.andrii.messageapp.data.contract.repository.MessagedRepository
 import basaraba.andrii.messageapp.database.contract.source.MessagesLocalSource
 import io.mockk.Runs
+import io.mockk.clearAllMocks
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
@@ -41,6 +42,7 @@ internal class MessagedRepositoryTest {
     @After
     fun tearDown() {
         Dispatchers.resetMain()
+        clearAllMocks()
     }
 
     @Test

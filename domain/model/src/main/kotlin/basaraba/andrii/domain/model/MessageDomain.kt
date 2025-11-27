@@ -5,5 +5,5 @@ data class MessageDomain(
     val message: String,
     val senderId: Long,
     val timestamp: Long,
-    val isRead: Boolean
+    val isRead: Boolean = false
 )

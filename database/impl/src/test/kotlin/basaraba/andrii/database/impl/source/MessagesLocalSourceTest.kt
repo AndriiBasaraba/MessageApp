@@ -9,6 +9,7 @@ import basaraba.andrii.messageapp.database.impl.room.toEntity
 import basaraba.andrii.messageapp.database.impl.source.MessagesLocalSourceImpl
 import com.google.common.truth.Truth.assertThat
 import io.mockk.Runs
+import io.mockk.clearAllMocks
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
@@ -18,6 +19,7 @@ import io.mockk.verify
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 
@@ -70,5 +72,10 @@ internal class MessagesLocalSourceTest {
         assertThat(result).isEqualTo(expectedDomainList)
 
         verify(exactly = 1) { dao.getAllMessages() }
+    }
+
+    @After
+    fun tearDown() {
+        clearAllMocks()
     }
 }

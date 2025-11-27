@@ -35,4 +35,5 @@ include(":data:impl")
 //domain region
 include(":domain:contract")
 include(":domain:model")
+include(":domain:impl")
 //region end
