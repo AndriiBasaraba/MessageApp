@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "MessageApp"
+include(":app")
+
+//database region
+include(":database:contract")
+//region end
+
+//data region
+include(":data:contract")
+//region end
+
+//domain region
+include(":domain:contract")
+include(":domain:model")
+//region end
