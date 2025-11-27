@@ -24,6 +24,7 @@ include(":app")
 
 //database region
 include(":database:contract")
+include(":database:impl")
 //region end
 
 //data region
