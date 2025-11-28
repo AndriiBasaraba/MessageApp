@@ -25,8 +25,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,9 +34,6 @@ import basaraba.andrii.messageapp.ui.utils.redColor
 internal fun ChatInputField(
     sendNewMessage: (String) -> Unit,
 ) {
-    val keyboardController = LocalSoftwareKeyboardController.current
-    val focusManager = LocalFocusManager.current
-
     var query by remember { mutableStateOf("") }
 
     fun sendMessage() {
@@ -56,53 +51,74 @@ internal fun ChatInputField(
             .wrapContentHeight()
     ) {
         Spacer(modifier = Modifier.width(16.dp))
-        OutlinedTextField(
+
+        MessageInputField(
             modifier = Modifier.weight(1f),
-            value = query,
-            onValueChange = { query = it },
-            singleLine = true,
-            shape = RoundedCornerShape(28.dp),
-            colors = TextFieldDefaults.colors(
-                cursorColor = Color.Black,
-                focusedContainerColor = Color.White,
-                unfocusedContainerColor = Color.White,
-                disabledTextColor = Color.Transparent,
-                focusedTextColor = Color.Black,
-                focusedIndicatorColor = redColor,
-                unfocusedIndicatorColor = Color.LightGray,
-                disabledIndicatorColor = Color.Transparent
-            ),
-            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
-            keyboardActions = KeyboardActions(
-                onSend = {
-                    sendMessage()
-                    keyboardController?.hide()
-                    focusManager.clearFocus()
-                }
-            )
+            query = query,
+            updateQuery = { query = it },
+            sendMessage = ::sendMessage
         )
-        Spacer(modifier = Modifier.width(16.dp))
-
-        IconButton(
-            modifier = Modifier.size(48.dp),
-            colors = IconButtonDefaults.iconButtonColors().copy(
-                containerColor = redColor,
-                disabledContainerColor = redColor.copy(alpha = 0.4f)
-            ),
-            onClick = {
-                sendMessage()
-            },
-            enabled = query.isNotBlank()
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Default.Send,
-                modifier = Modifier.size(28.dp),
-                contentDescription = null,
-                tint = Color.White
-            )
-        }
 
         Spacer(modifier = Modifier.width(16.dp))
+
+        SendBtn(query = query, sendMessage = ::sendMessage)
+
+        Spacer(modifier = Modifier.width(16.dp))
+    }
+}
+
+@Composable
+private fun MessageInputField(
+    modifier: Modifier,
+    query: String,
+    updateQuery: (String) -> Unit,
+    sendMessage: () -> Unit,
+) {
+    OutlinedTextField(
+        modifier = modifier,
+        value = query,
+        onValueChange = { updateQuery(it) },
+        singleLine = true,
+        shape = RoundedCornerShape(28.dp),
+        colors = TextFieldDefaults.colors(
+            cursorColor = Color.Black,
+            focusedContainerColor = Color.White,
+            unfocusedContainerColor = Color.White,
+            disabledTextColor = Color.Transparent,
+            focusedTextColor = Color.Black,
+            focusedIndicatorColor = redColor,
+            unfocusedIndicatorColor = Color.LightGray,
+            disabledIndicatorColor = Color.Transparent
+        ),
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
+        keyboardActions = KeyboardActions(
+            onSend = { sendMessage() }
+        )
+    )
+}
+
+@Composable
+private fun SendBtn(
+    query: String,
+    sendMessage: () -> Unit,
+) {
+    IconButton(
+        modifier = Modifier.size(48.dp),
+        colors = IconButtonDefaults.iconButtonColors().copy(
+            containerColor = redColor,
+            disabledContainerColor = redColor.copy(alpha = 0.4f)
+        ),
+        onClick = {
+            sendMessage()
+        },
+        enabled = query.isNotBlank()
+    ) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Default.Send,
+            modifier = Modifier.size(28.dp),
+            contentDescription = null,
+            tint = Color.White
+        )
     }
 }
 

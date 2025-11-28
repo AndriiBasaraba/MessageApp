@@ -29,6 +29,8 @@
 
 ### App Limitations and Future Work
 
+* Refactor Koin and move it out of Application class
+
 * Missing Features: Group chats, image/media support, message reactions, and read receipts are not implemented.
 
 * Required Optimizations: Implement Paging to load messages in chunks to prevent OutOfMemoryError on large datasets.
@@ -39,4 +41,4 @@
 
 
 
-* <img src="screenshots/screenshot_a.png" width="350"> <img src="screenshots/screenshot_b.png" width="350">
+* <img src="screenshots/screenshot_a.png" width="300"> <img src="screenshots/screenshot_b.png" width="300">
