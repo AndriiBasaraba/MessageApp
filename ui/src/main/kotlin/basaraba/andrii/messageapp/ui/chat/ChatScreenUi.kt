@@ -2,9 +2,7 @@ package basaraba.andrii.messageapp.ui.chat
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -35,9 +33,7 @@ internal fun ChatScreenUi(
 
     Scaffold(
         containerColor = Color.White,
-        modifier = Modifier
-            .fillMaxSize()
-            .imePadding(),
+        modifier = Modifier.fillMaxSize(),
         topBar = {
             ChatTopBar(
                 activeUser = activeUser,
@@ -53,8 +49,7 @@ internal fun ChatScreenUi(
             state = listState,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
-                .consumeWindowInsets(padding),
+                .padding(padding),
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp)
         ) {
