@@ -12,7 +12,7 @@ internal data class MessageEntity(
     @ColumnInfo(name = "timestamp") val timestamp: Long,
     @ColumnInfo(name = "sender_id") val senderId: Long,
     @ColumnInfo(name = "is_read") val isRead: Boolean,
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "db_id") val dbId: Long = 1
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "db_id") val dbId: Long = 0
 )
 
 internal fun MessageEntity.toDomain(): MessageDomain =

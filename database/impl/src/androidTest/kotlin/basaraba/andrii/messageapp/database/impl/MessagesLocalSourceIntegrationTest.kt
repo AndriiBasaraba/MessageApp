@@ -44,7 +44,8 @@ internal class MessagesLocalSourceIntegrationTest {
             message = "hello",
             senderId = 1,
             timestamp = 123,
-            isRead = false
+            isRead = false,
+            dbId = 1
         )
 
         dao.insertMessage(entity)

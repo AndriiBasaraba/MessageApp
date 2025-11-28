@@ -4,6 +4,7 @@ import android.app.Application
 import basaraba.andrii.messageapp.data.impl.di.messageDataModule
 import basaraba.andrii.messageapp.database.impl.di.databaseModule
 import basaraba.andrii.messageapp.domain.impl.di.messageDomainModule
+import basaraba.andrii.messageapp.ui.di.messagesUiModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -22,7 +23,8 @@ internal class MessagesApplication : Application() {
                 arrayListOf(
                     databaseModule,
                     messageDataModule,
-                    messageDomainModule
+                    messageDomainModule,
+                    messagesUiModule
                 )
             )
         }

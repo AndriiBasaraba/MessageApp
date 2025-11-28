@@ -15,6 +15,6 @@ java {
 }
 
 dependencies {
-    implementation(project(":domain:model"))
+    api(project(":domain:model"))
     api(libs.kotlinx.coroutines.core)
 }
