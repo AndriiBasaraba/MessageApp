@@ -1,8 +1,7 @@
 package basaraba.andrii.messageapp.ui.chat.composable
 
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -11,6 +10,7 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
@@ -21,7 +21,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
@@ -43,11 +42,10 @@ internal fun ChatInputField(
         query = ""
     }
 
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
+    BottomAppBar(
+        containerColor = Color.White,
         modifier = Modifier
-            .shadow(1.dp)
-            .padding(top = 16.dp, bottom = 22.dp)
+            .shadow(10.dp)
             .wrapContentHeight()
     ) {
         Spacer(modifier = Modifier.width(16.dp))

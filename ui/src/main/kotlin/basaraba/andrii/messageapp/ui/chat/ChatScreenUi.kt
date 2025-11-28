@@ -21,10 +21,11 @@ import basaraba.andrii.messageapp.ui.chat.composable.DateHeader
 import basaraba.andrii.messageapp.ui.chat.composable.MessageBubble
 import basaraba.andrii.messageapp.ui.chat.model.ActiveUser
 import basaraba.andrii.messageapp.ui.chat.model.Message
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 internal fun ChatScreenUi(
-    messages: List<Message>,
+    messages: ImmutableList<Message>,
     activeUser: ActiveUser,
     sendNewMessage: (String) -> Unit,
     changeActiveUser: () -> Unit,

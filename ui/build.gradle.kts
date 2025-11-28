@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.kotlinx.datetime)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.kotlinx.collections.immutable)
 
 
     debugImplementation(libs.androidx.compose.ui.tooling)

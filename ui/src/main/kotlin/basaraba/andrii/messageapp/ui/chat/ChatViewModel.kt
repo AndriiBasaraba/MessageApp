@@ -7,6 +7,9 @@ import basaraba.andrii.messageapp.domain.contract.use_case.SendMessageUseCase
 import basaraba.andrii.messageapp.ui.chat.mapper.MessageUiMapper
 import basaraba.andrii.messageapp.ui.chat.model.ActiveUser
 import basaraba.andrii.messageapp.ui.chat.model.Message
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -26,15 +29,15 @@ internal class ChatViewModel(
     private val _activeUser = MutableStateFlow(ActiveUser.SARAH)
     val activeUser: StateFlow<ActiveUser> = _activeUser.asStateFlow()
 
-    val messagesUi: StateFlow<List<Message>> = combine(
+    val messagesUi: StateFlow<ImmutableList<Message>> = combine(
         getAllMessagesUseCase(),
         activeUser
     ) { messages, user ->
-        uiMapper.map(messages, user.id)
+        uiMapper.map(messages, user.id).toImmutableList()
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
-        initialValue = emptyList()
+        initialValue = persistentListOf()
     )
 
     fun sendMessage(message: String) {
