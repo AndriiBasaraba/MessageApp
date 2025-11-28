@@ -52,7 +52,7 @@ internal fun ChatInputField(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .shadow(1.dp)
-            .padding(vertical = 16.dp)
+            .padding(top = 16.dp, bottom = 22.dp)
             .wrapContentHeight()
     ) {
         Spacer(modifier = Modifier.width(16.dp))

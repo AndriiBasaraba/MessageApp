@@ -36,3 +36,9 @@
 * Polish: Refine the keyboard interaction to fully eliminate potential screen jumping.
 
 * Core Feature: Integrate Network Synchronization to enable real-time messaging.
+
+
+
+* <img src="screenshots/screenshot_a.png">
+  
+* <img src="screenshots/screenshot_b.png">
