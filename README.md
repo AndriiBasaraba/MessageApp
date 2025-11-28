@@ -39,6 +39,4 @@
 
 
 
-* <img src="screenshots/screenshot_a.png">
-  
-* <img src="screenshots/screenshot_b.png">
+* <img src="screenshots/screenshot_a.png" width="350"> <img src="screenshots/screenshot_b.png" width="350">
