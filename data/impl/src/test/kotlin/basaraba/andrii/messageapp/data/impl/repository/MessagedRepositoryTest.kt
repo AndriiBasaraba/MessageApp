@@ -1,7 +1,8 @@
 package basaraba.andrii.messageapp.data.impl.repository
 
 import basaraba.andrii.domain.model.MessageDomain
-import basaraba.andrii.messageapp.data.contract.repository.MessagedRepository
+import basaraba.andrii.messageapp.data.contract.repository.MessagesRepository
+import basaraba.andrii.messageapp.data.impl.mock.MessagesMockSource
 import basaraba.andrii.messageapp.database.contract.source.MessagesLocalSource
 import io.mockk.Runs
 import io.mockk.clearAllMocks
@@ -29,14 +30,15 @@ import org.junit.Test
 internal class MessagedRepositoryTest {
 
     private val localSource = mockk<MessagesLocalSource>()
-    private lateinit var repository: MessagedRepository
+    private val mockSource = mockk<MessagesMockSource>()
+    private lateinit var repository: MessagesRepository
 
     private val testDispatcher = StandardTestDispatcher()
 
     @Before
     fun setup() {
         Dispatchers.setMain(testDispatcher)
-        repository = MessagedRepositoryImpl(localSource = localSource)
+        repository = MessagesRepositoryImpl(localSource = localSource, mockSource = mockSource)
     }
 
     @After

@@ -7,4 +7,8 @@ interface MessagesLocalSource {
     fun getAllMessages(): Flow<List<MessageDomain>>
 
     suspend fun insertMessage(message: MessageDomain)
+
+    suspend fun insertMessages(messages: List<MessageDomain>)
+
+    suspend fun getMessagesCount(): Int
 }

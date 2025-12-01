@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.serialization)
 }
 
 android {
@@ -32,6 +33,7 @@ dependencies {
     implementation(project(":data:contract"))
 
     implementation(libs.koin.androidx.compose)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     testImplementation(libs.mockk)

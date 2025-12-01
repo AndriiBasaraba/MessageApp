@@ -1,7 +1,7 @@
 package basaraba.andrii.domain.impl.use_case
 
 import basaraba.andrii.domain.model.MessageDomain
-import basaraba.andrii.messageapp.data.contract.repository.MessagedRepository
+import basaraba.andrii.messageapp.data.contract.repository.MessagesRepository
 import basaraba.andrii.messageapp.domain.contract.use_case.SendMessageUseCase
 import basaraba.andrii.messageapp.domain.impl.use_case.SendMessageUseCaseImpl
 import io.mockk.Runs
@@ -15,7 +15,7 @@ import org.junit.Test
 
 internal class SendMessageUseCaseTest {
 
-    private val repository = mockk<MessagedRepository>()
+    private val repository = mockk<MessagesRepository>()
     private lateinit var useCase: SendMessageUseCase
 
     @Before

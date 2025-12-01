@@ -14,7 +14,14 @@ internal class MessagesLocalSourceImpl(
     override fun getAllMessages(): Flow<List<MessageDomain>> =
         dao.getAllMessages().map { messages -> messages.map { it.toDomain() } }
 
+    override suspend fun insertMessages(messages: List<MessageDomain>) {
+        dao.insertMessages(messages = messages.map { it.toEntity() })
+    }
+
     override suspend fun insertMessage(message: MessageDomain) {
         dao.insertMessage(message = message.toEntity())
     }
+
+    override suspend fun getMessagesCount(): Int =
+        dao.getMessagesCount()
 }

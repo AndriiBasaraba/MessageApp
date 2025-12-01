@@ -1,0 +1,129 @@
+[
+  {
+    "messageId": "f7a0e3f6-0b2c-4df6-94df-7d3760bc1e7a",
+    "message": "Hey, did you pick a movie for tonight?",
+    "senderId": 1,
+    "timestamp": 1764583200000,
+    "isRead": false
+  },
+  {
+    "messageId": "8bb5ce22-a5a7-4e76-9950-d471ddf09b76",
+    "message": "Not yet, was thinking maybe the new sci-fi one?",
+    "senderId": 2,
+    "timestamp": 1764583220000,
+    "isRead": false
+  },
+  {
+    "messageId": "1f9b5929-2e55-4727-a6e7-d89fe5f9d4a9",
+    "message": "Oh yeah, I heard good things about it.",
+    "senderId": 1,
+    "timestamp": 1764583230000,
+    "isRead": false
+  },
+  {
+    "messageId": "d63b6d09-62a3-4e11-b1b8-caa64519d028",
+    "message": "Should we book tickets now?",
+    "senderId": 2,
+    "timestamp": 1764583240000,
+    "isRead": false
+  },
+  {
+    "messageId": "4bccc0be-df73-4afb-91e9-58c3d16d93b4",
+    "message": "Yeah, let's do it. What time works for you?",
+    "senderId": 1,
+    "timestamp": 1764583265000,
+    "isRead": false
+  },
+  {
+    "messageId": "c66ac2ab-71d8-4b4d-a09d-108655e2e536",
+    "message": "Maybe the 7:30pm show?",
+    "senderId": 2,
+    "timestamp": 1764583290000,
+    "isRead": false
+  },
+  {
+    "messageId": "04f3c2bd-b8d5-43ca-a59e-4ed4f2e5e9c8",
+    "message": "Works for me. I'll grab the seats.",
+    "senderId": 1,
+    "timestamp": 1764583300000,
+    "isRead": false
+  },
+  {
+    "messageId": "aa28a53a-d9cb-43d0-93a9-155c66bdc3fd",
+    "message": "Cool, get middle row if possible.",
+    "senderId": 2,
+    "timestamp": 1764583325000,
+    "isRead": false
+  },
+  {
+    "messageId": "c8ee52dc-1d0c-4cd7-8cd1-2e0c13799e80",
+    "message": "Done! Sent you the QR.",
+    "senderId": 1,
+    "timestamp": 1764583340000,
+    "isRead": false
+  },
+
+  {
+    "messageId": "98169d70-c298-4a84-8c34-f59bfa652152",
+    "message": "Nice. Want to grab food before?",
+    "senderId": 2,
+    "timestamp": 1764590400000,
+    "isRead": false
+  },
+  {
+    "messageId": "f5604aab-2a7d-4bb5-9e3b-e7ee7f0d0b1e",
+    "message": "Yeah, I could go for something quick.",
+    "senderId": 1,
+    "timestamp": 1764590420000,
+    "isRead": false
+  },
+  {
+    "messageId": "b89c0b04-3b1e-4699-86e4-5ce086ba7e0f",
+    "message": "Burgers?",
+    "senderId": 2,
+    "timestamp": 1764590430000,
+    "isRead": false
+  },
+  {
+    "messageId": "0e0a21bc-a226-4860-b77e-8a10ab7f1f59",
+    "message": "Perfect. I’ll meet you at the place near the theater.",
+    "senderId": 1,
+    "timestamp": 1764590440000,
+    "isRead": false
+  },
+  {
+    "messageId": "be0b383f-a47f-421f-8c1d-a0553856bc75",
+    "message": "Sounds good. 6:30?",
+    "senderId": 2,
+    "timestamp": 1764590460000,
+    "isRead": false
+  },
+  {
+    "messageId": "4992c516-de96-4a4b-b872-c7af27d084ed",
+    "message": "Yep, I'll be there.",
+    "senderId": 1,
+    "timestamp": 1764590470000,
+    "isRead": false
+  },
+  {
+    "messageId": "b544661b-9f9f-469d-930e-03e6d8b9c2f5",
+    "message": "Great! Looking forward to it.",
+    "senderId": 2,
+    "timestamp": 1764590490000,
+    "isRead": false
+  },
+  {
+    "messageId": "3f4a1b31-e46b-406e-9bb3-b90284a70b4f",
+    "message": "Same here. Been a while since we went out.",
+    "senderId": 1,
+    "timestamp": 1764590500000,
+    "isRead": false
+  },
+  {
+    "messageId": "bf7ce2e7-9e68-4efa-a861-2ae42c2ac6b3",
+    "message": "True! Should do this more often.",
+    "senderId": 2,
+    "timestamp": 1764590520000,
+    "isRead": false
+  }
+]

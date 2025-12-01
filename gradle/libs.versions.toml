@@ -17,6 +17,7 @@ kotlinxCoroutines = "1.10.2"
 materialIconsExtended = "1.7.8"
 coil = "2.7.0"
 kotlinxDatetime = "0.7.1"
+kotlinxSerializationJson = "1.9.0"
 
 
 mockk = "1.14.6"
@@ -47,6 +48,7 @@ androidx-compose-material-icons-extended = { group = "androidx.compose.material"
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxCollectionsImmutable" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -67,3 +69,4 @@ java-library = { id = "java-library" }
 kotlin = { id = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 library = { id = "com.android.library", version.ref = "agp" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

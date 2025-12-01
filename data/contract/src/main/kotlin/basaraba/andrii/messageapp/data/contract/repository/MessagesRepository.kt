@@ -3,7 +3,7 @@ package basaraba.andrii.messageapp.data.contract.repository
 import basaraba.andrii.domain.model.MessageDomain
 import kotlinx.coroutines.flow.Flow
 
-interface MessagedRepository {
+interface MessagesRepository {
 
     fun getAllMessages(): Flow<List<MessageDomain>>
 
